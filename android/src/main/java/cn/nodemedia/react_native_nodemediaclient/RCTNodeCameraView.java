@@ -77,6 +77,7 @@ public class RCTNodeCameraView extends NodeCameraView implements LifecycleEventL
         this.cameraId = cameraId;
         this.cameraFrontMirror = cameraFrontMirror;
         mNodePublisher.setCameraPreview(this, cameraId, cameraFrontMirror);
+         mNodePublisher.setAutoReconnectWaitTimeout(20000);
         if(isAutoPreview) {
             this.startPrev();
         }
