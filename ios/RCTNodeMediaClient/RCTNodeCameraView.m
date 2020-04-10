@@ -78,6 +78,10 @@
   int videoProfile = [[video objectForKey:@"profile"] intValue];
   BOOL videoFrontMirror = [[video objectForKey:@"videoFrontMirror"] boolValue];
   [_np setVideoParamPreset:videoPreset fps:videoFPS bitrate:videoBitrate profile:videoProfile frontMirror:videoFrontMirror];
+ 
+    [_np setAutoReconnectWaitTimeout:20000];
+  
+  
   if(_autopreview && _camera) {
     [_np startPreview];
   }
