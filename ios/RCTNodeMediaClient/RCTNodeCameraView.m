@@ -21,7 +21,7 @@
 - (id)init {
   self = [super init];
   if(self) {
-    _np = [NodePublisher alloc];
+    _np = [[NodePublisher alloc] init];
     [_np setNodePublisherDelegate:self];
     _autopreview = NO;
     _outputUrl = nil;
