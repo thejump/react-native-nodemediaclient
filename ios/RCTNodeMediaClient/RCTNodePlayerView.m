@@ -22,7 +22,7 @@
 - (id)init {
   self = [super init];
   if(self) {
-    _np = [NodePlayer alloc];
+    _np = [[NodePlayer alloc] init];
     [_np setPlayerView:self];
     _autoplay = NO;
     _inputUrl = nil;
